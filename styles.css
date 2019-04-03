@@ -1,0 +1,124 @@
+body{
+  display: grid;
+  grid-template-columns: 10% 1fr;
+  grid-template-rows: 70px 1fr;
+  grid-template-areas:"header header"
+                      "menu content";
+  margin:0;
+  background-color:white;
+  font-family: 'Lato', sans-serif;
+}
+li, ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.header{
+  display: grid;
+  grid-area: header;
+  justify-content: center;
+  box-shadow: 0 2px 20px 5px #f2f2f2;
+}
+.navBar{
+  max-width: 1440px;
+  display:grid;
+  grid-template-columns: 2fr 3fr 1fr;
+  grid-template-rows: 70px;
+  justify-content: center;
+  align-items: center;
+}
+.navBar figure{
+  margin:0 auto;
+}
+.UserImg {
+  width: 50px;
+  height: 50px;
+  margin: 0;
+}
+.UserImg img{
+  width: 100%;
+}
+.UserProfile{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding-left: 10%;
+  align-items: center;
+  justify-content: center;
+}
+.search{
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  box-shadow: none;
+  padding: 0.5em;
+}
+
+.menu{
+  display: grid;
+  grid-template-areas: menu;
+  background-color: rgb(253, 103, 102);
+  justify-content: center;
+  align-content: space-between;
+}
+.menuItems{
+  display: grid;
+  justify-content: center;
+}
+.singleItem{
+  margin:30px 0;
+  width: 40px;
+  height: 40px;
+
+}
+.singleItem img{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.ItemName{
+  margin-top: 10px;
+}
+.content{
+  display: grid;
+  grid-area: content;
+}
+.sectionTitle{
+  padding:0 1em;
+}
+.films{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding: 0 2em;
+}
+.filmItem{
+  position: relative;
+}
+.filmIMG{
+  margin:0;
+  margin-bottom: 1.5em;
+  max-width: 491px;
+  max-height: 300px;
+}
+.filmIMG img {
+  width: 100%;
+}
+.filmOverlay{
+  position: absolute;
+  height: 50%;
+  bottom:0;
+  right:0;
+  left:0;
+  background-color: rgba(253, 103, 102, .5)
+}
+.filmTitle{
+  margin:3px;
+  font-size: 1em;
+}
+.filmDesccription{
+  font-size: .5em;
+}
