@@ -13,7 +13,6 @@ li, ul {
   margin: 0;
   list-style-type: none;
 }
-
 .header{
   display: grid;
   grid-area: header;
