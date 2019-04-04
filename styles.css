@@ -16,8 +16,12 @@ li, ul {
 .header{
   display: grid;
   grid-area: header;
+  background-color: white;
+  position: fixed;
+  width: 100%;
   justify-content: center;
   box-shadow: 0 2px 20px 5px #f2f2f2;
+  z-index:6;
 }
 .navBar{
   max-width: 1440px;
@@ -55,7 +59,11 @@ li, ul {
 
 .menu{
   display: grid;
+  position:fixed;
   grid-template-areas: menu;
+  width: 10%;
+  height: calc(100vh - 70px);
+  top:70px;
   background-color: rgb(253, 103, 102);
   justify-content: center;
   align-content: space-between;
@@ -84,6 +92,13 @@ li, ul {
 .content{
   display: grid;
   grid-area: content;
+  justify-content: center;
+  align-items: center;
+}
+.Maincontainer{
+  display: grid;
+  max-width: 1440px;
+
 }
 .sectionTitle{
   padding:0 1em;
@@ -96,12 +111,12 @@ li, ul {
 }
 .filmItem{
   position: relative;
+  max-width: 491px;
 }
 .filmIMG{
   margin:0;
-  margin-bottom: 1.5em;
-  max-width: 491px;
-  max-height: 300px;
+  /* margin-bottom: 1.5em; */
+  /* max-height: 300px; */
 }
 .filmIMG img {
   width: 100%;
@@ -109,7 +124,7 @@ li, ul {
 .filmOverlay{
   position: absolute;
   height: 50%;
-  bottom:0;
+  bottom:4px;
   right:0;
   left:0;
   background-color: rgba(253, 103, 102, .5)
