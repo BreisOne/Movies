@@ -121,19 +121,134 @@ li, ul {
 }
 .filmIMG img {
   width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .filmOverlay{
   position: absolute;
-  height: 50%;
-  bottom:4px;
+  height: 30%;
+  padding:5%;
+  bottom:3px;
   right:0;
   left:0;
-  background-color: rgba(253, 103, 102, .5)
+  background-color: rgba(253, 103, 102, .7);
+  transition: .4s;
+}
+.filmOverlay:hover{
+  height: 84%;
+}
+.filmOverlay:hover .seeMore{
+  display:block;
+  -webkit-animation: fadeInFromNone .5s ease-out;
+  -moz-animation: fadeInFromNone .5s ease-out;
+  -o-animation: fadeInFromNone .5s ease-out;
+  animation: fadeInFromNone .5s ease-out;
+}
+
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
 }
 .filmTitle{
-  margin:3px;
+  margin:0;
+  margin-bottom: 4px;
   font-size: 1em;
 }
 .filmDesccription{
-  font-size: .5em;
+  font-size: .8em;
+  margin: 0;
+}
+.seeMore{
+  display:none;
+}
+
+@media screen and (max-width:1025px){
+  .filmOverlay{
+    padding-top: 3%;
+  }
+  .filmTitle{
+    font-size: .7em;
+  }
+  .filmDesccription{
+    font-size: .5em;
+  }
+}
+@media screen and (max-width:769px){
+  .filmDesccription{
+    font-size: .6em;
+  }
+  .films{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width:361px){
+  .films{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .filmDesccription{
+    font-size: .45em;
+  }
 }
