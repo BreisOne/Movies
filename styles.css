@@ -105,8 +105,8 @@ li, ul {
 }
 .films{
   display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
   padding: 0 2em;
 }
 .filmItem{
@@ -125,16 +125,17 @@ li, ul {
 }
 .filmOverlay{
   position: absolute;
+  overflow: hidden;
   height: 30%;
   padding:5%;
   bottom:3px;
   right:0;
   left:0;
-  background-color: rgba(253, 103, 102, .7);
+  background-color: rgba(253, 103, 102, .9);
   transition: .4s;
 }
 .filmOverlay:hover{
-  height: 84%;
+  height: 93%;
 }
 .filmOverlay:hover .seeMore{
   display:block;
