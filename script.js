@@ -70,6 +70,7 @@
          }
         // conversión del texto de la función iteradora a HTML
         function createTemplate(HTMLString){
+            
             const html = document.implementation.createHTMLDocument();
             html.body.innerHTML = HTMLString;
             return html.body.children[0];
@@ -77,6 +78,7 @@
         // Iterador para cada item del array/lista que trae el método fetch de la API.
         function renderMovieList(list, $container){
             // Funcion iteradora y encapsulación en una constante
+            $container.children[0].remove(); //$container.querySelector('img') otra opción de escribirlo
             list.forEach((movie)=>{
                 const HTMLString = videoItemTemplate(movie);
                 const movieElement = createTemplate(HTMLString);

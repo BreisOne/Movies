@@ -8,6 +8,9 @@ body{
   background-color:white;
   font-family: 'Lato', sans-serif;
 }
+h2{
+  margin-top:40px;
+}
 li, ul {
   padding: 0;
   margin: 0;
@@ -97,11 +100,10 @@ li, ul {
 }
 .Maincontainer{
   display: grid;
-  max-width: 1440px;
-
+  grid-template-columns: minmax(auto, 1440px);
 }
 .sectionTitle{
-  padding:0 1em;
+  padding:0 1.5em;
 }
 .films{
   display:grid;
