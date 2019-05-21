@@ -86,7 +86,6 @@
                 $container.append(movieElement)    
             })
         }
-        
         function showModal(){
          $overlay.classList.remove('hide');
         //  $modal.getElementsByClassName.animation('')
