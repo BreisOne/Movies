@@ -86,6 +86,12 @@
                 $container.append(movieElement)    
             })
         }
+        
+        function showModal(){
+         $overlay.classList.remove('hide');
+        //  $modal.getElementsByClassName.animation('')
+        }
+        
         // Generar constantes a partir de selectores con jquery:
                 // const $home = $('.home .list #item');
         
@@ -93,26 +99,33 @@
 
             // Contantes para el modal y sus partes:
 
-            const $modal = document.querySelector('#modal');
-            const $overlay = document.querySelector('#overlay');
-            const $hideModal = document.querySelector('#hideModal');
-    
+            
+            
             // const $modalTitle = $modal.querySelector('h1');
             // const $modalImage = $modal.querySelector('img');
             // const $modalDescription = $modal.querySelector('p');
-    
-    
-                // Contantes para los contenedores de las peliculas:
-    
+            
+            
+            // Contantes para los contenedores de las peliculas:
+            
             const $actionContainer = document.getElementById('action');
             const $dramaContainer = document.getElementById('drama');
             const $animationContainer = document.getElementById('animation');
-    
+            
             const $featuringContainer = document.getElementById('featuring');
             const $form = document.getElementById('form');
             const $home = document.getElementById('home');
-
+            
             renderMovieList(actionList.data.movies, $actionContainer);
             renderMovieList(dramaList.data.movies, $dramaContainer);
             renderMovieList(animationList.data.movies, $animationContainer);
+            
+            
         })()
+        const $modal = document.querySelector('#modal');
+        const $overlay = document.querySelector('#overlay');
+        const $hideModal = document.querySelector('#hideModal');
+        
+        function closeModal(){
+            $overlay.classList.add('hide');
+        }

@@ -97,6 +97,50 @@ li, ul {
   grid-area: content;
   justify-content: center;
   align-items: center;
+  position:relative;
+}
+.overlay{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position:fixed;
+  top:0;
+  bottom:0;
+  right: 0;
+  left: 0;
+  z-index:5;
+  background-color: rgba(83, 78, 78, 0.9);
+}
+
+.hide{
+  display:none;
+}
+.BtnClose{
+  position: absolute;
+  box-sizing: border-box;
+  top: 4%;
+  left:91%;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+}
+
+.modal{ 
+  max-width: 500px;
+  position:relative;
+  padding: 3%;
+  margin:5%;
+  background-color:rgb(255, 255, 255);
+  border-radius: 15px;
+}
+.modal h1{
+  text-align: center;
+}
+.modalIMG img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
 }
 .Maincontainer{
   display: grid;
