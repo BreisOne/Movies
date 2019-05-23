@@ -34,7 +34,7 @@ li, ul {
   justify-content: center;
   align-items: center;
 }
-.navBar figure{
+.logo{
   margin:0 auto;
 }
 .UserImg {
@@ -52,12 +52,18 @@ li, ul {
   align-items: center;
   justify-content: center;
 }
-.search{
+.searchContainer{
   height: 40px;
+}
+.search{
+  width: 100%;
+  height: 100%;
+  padding: 0.5em;
+  margin:0;
   border-radius: 5px;
   border: 1px solid grey;
   box-shadow: none;
-  padding: 0.5em;
+  box-sizing: border-box;
 }
 
 .menu{
@@ -73,7 +79,7 @@ li, ul {
   z-index: 4;
 }
 .menuItems{
-  max-width: 102px;
+  width: 100%;
   display: grid;
   justify-content: center;
 }
@@ -82,8 +88,6 @@ li, ul {
   text-align: center;
   padding: 0 1em;
   margin: 1em 0 ;
-  /* height: 40px; */
-
 }
 .singleItem img{
   width: 50px;
@@ -282,6 +286,35 @@ li, ul {
   }
 }
 @media screen and (max-width:769px){
+  body{
+    grid-template-columns: auto;
+    grid-template-rows: 70px 1fr 70px;
+    grid-template-areas:" header"
+                        "content"
+                          "menu";                    
+  }
+  .menu{
+    display: flex;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: calc(100% - 70px);
+  }
+  .menuItems{
+    display: inherit;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .singleItem{ 
+    margin: .5em;
+  }
+  .singleItem img{
+    width: 40px;
+  }
+  .ItemName{
+    display:none;
+  }
   .filmDesccription{
     font-size: .6em;
   }
@@ -289,7 +322,30 @@ li, ul {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+@media screen and (max-width: 425px){
+  .navBar{
+    padding: .3em;
+    grid-template-columns: 1fr 1fr;
+  }
+  .UserProfile{
+    display: none;
+  }
+}
 @media screen and (max-width:361px){
+  .logo{
+    margin:0;
+  }
+  
+  .logo img{
+    width: 100%;
+  }
+  .menu{
+    top: calc(100% - 45px);
+    height: 45px;
+  }
+  .singleItem img{
+    width: 30px;
+  }
   .films{
     grid-template-columns: repeat(1, 1fr);
   }
