@@ -79,7 +79,7 @@ li, ul {
   z-index: 4;
 }
 .menuItems{
-  width: 100%;
+  width: 102px;
   display: grid;
   justify-content: center;
 }
