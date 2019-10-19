@@ -120,7 +120,7 @@
             renderMovieList(animationList.data.movies, $animationContainer);
             
             
-     })
+        })
 
         const $modal = document.querySelector('#modal');
         const $overlay = document.querySelector('#overlay');
