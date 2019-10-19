@@ -29,7 +29,7 @@
 // Función asincrona que trae datos de películas de la API de los generos de acción, drama y animación
     (async function load(){
         async function getData(url){
-            const response = await fetch(url);
+            const response = await fetch(url, { mode: 'no-cors' });
             const data = await response.json();
             return data;
         }
@@ -120,7 +120,7 @@
             renderMovieList(animationList.data.movies, $animationContainer);
             
             
-        })()
+        })
         const $modal = document.querySelector('#modal');
         const $overlay = document.querySelector('#overlay');
         const $hideModal = document.querySelector('#hideModal');
