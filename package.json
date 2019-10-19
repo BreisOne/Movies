@@ -1,0 +1,19 @@
+{
+  "name": "movies",
+  "version": "1.0.0",
+  "description": "https://breisone.github.io/Movies/",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BreisOne/Movies.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BreisOne/Movies/issues"
+  },
+  "homepage": "https://github.com/BreisOne/Movies#readme"
+}
